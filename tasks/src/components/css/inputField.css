@@ -1,0 +1,22 @@
+
+
+  .input-field label {
+    font-size: smaller;
+    padding-bottom: 10px; 
+    display: block; 
+    color: rgb(204, 204, 204)
+  }
+  
+  .input-field input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid rgb(77, 77, 77);
+    border-radius: 7px; 
+    background-color: transparent;
+    outline: none;
+  }
+
+  .input-field input:focus {
+    border: 1px solid rgb(173, 173, 173);
+  }
