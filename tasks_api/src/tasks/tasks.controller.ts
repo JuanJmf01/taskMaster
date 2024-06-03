@@ -1,14 +1,16 @@
-import { Body, Controller, Delete, Post, Patch, Param, BadRequestException } from '@nestjs/common';
+import { Body, Controller, Delete, Post, Patch, Param, BadRequestException, UseGuards } from '@nestjs/common';
 import { CreateTaskDto } from './dto/create-task.dto';
 import { TasksService } from './tasks.service';
 import { UpdateTaskDto } from './dto/update-task.dto';
 import { Task } from './task.entity';
+import { JwtAuthGuard } from '../auth/jwt-auth.guard';
 
 @Controller('tasks')
 export class TasksController {
   constructor(private readonly tasksService: TasksService) {}
 
   @Post()
+  @UseGuards(JwtAuthGuard) // Aplicar la guardia de acceso JWT
   async createTask(@Body() createTaskDto: CreateTaskDto) {
     if (!createTaskDto.userId) {
       throw new BadRequestException('userId cannot be null');
