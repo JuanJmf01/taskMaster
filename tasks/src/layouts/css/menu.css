@@ -1,0 +1,37 @@
+.menu {
+    display: flex;
+    padding: 0.1% 3%;
+    align-items: center;
+    height: 60px;
+}
+
+.middle-item {
+    display: flex;
+}
+
+.middle-item {
+    flex: 1;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.middle-item a {
+    text-decoration: none;
+    margin: 0px 15px;
+
+}
+
+.middle-item div {
+    margin: 0 10px;
+}
+
+.middle-item a.active {
+    color: rgb(19, 136, 244); /*Active color*/
+}
+
+.right-items {
+    margin-left: auto;
+    display: flex;
+    gap: 12px;
+}
+
